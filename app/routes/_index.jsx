@@ -96,7 +96,7 @@ export default function Index() {
             </div>
             {/* Projects*/}
             <div className='mb-20'>
-            <p className='sm:hidden text-lg mb-8'>PROJECTS</p>
+            <p className='sm:hidden text-lg'>PROJECTS</p>
             <ProjectList />
             <Link
               to="/resume"
@@ -105,8 +105,6 @@ export default function Index() {
               <p>View Full Project Archive</p>
             </Link>
             </div>
-            <br></br>
-            <br></br>
             <br></br>
           </div>
         </div>
