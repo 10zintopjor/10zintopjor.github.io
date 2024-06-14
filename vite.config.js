@@ -1,11 +1,10 @@
 import { vitePlugin as remix } from "@remix-run/dev";
 import { defineConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
-  base:"/10zintopjor.github.io/",
   plugins: [
     remix({
-      basename : "/10zintopjor.github.io/",
       ssr: false,
       future: {
         v3_fetcherPersist: true,
@@ -13,5 +12,6 @@ export default defineConfig({
         v3_throwAbortReason: true,
       },
     }),
+    tsconfigPaths(),
   ],
 });
