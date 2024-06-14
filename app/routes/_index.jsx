@@ -5,28 +5,54 @@ import ExperienceList from '../components/ExperienceList'
 import { Link } from "@remix-run/react";
 
 export default function Index() {
+
   const [showMargin, setShowMargin] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  const [activeSection, setActiveSection] = useState(null);
+
   useEffect(() => {
     const handleScroll = () => {
-      setShowMargin(window.scrollY === 0);
+      const aboutSection = document.getElementById('about');
+      const experiencesSection = document.getElementById('experiences');
+      const projectsSection = document.getElementById('projects');
+
+      const sections = [
+        { id: 'about', element: aboutSection },
+        { id: 'experiences', element: experiencesSection },
+        { id: 'projects', element: projectsSection },
+      ];
+
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+      for (const section of sections) {
+        if (section.element) {
+          const { top, height } = section.element.getBoundingClientRect();
+          const sectionTop = top + window.scrollY;
+          const sectionBottom = sectionTop + height;
+
+          if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom) {
+            setActiveSection(section.id);
+            break; // Stop loop once active section is found
+          }
+        }
+      }
     };
 
-    const handleMouseMove = (event) => {
-      setMousePosition({ x: event.clientX, y: event.clientY });
-    };
-
-    // Add event listeners
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('mousemove', handleMouseMove);
-
-    // Remove event listeners on cleanup
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('mousemove', handleMouseMove);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+
+
+  
 
   return (
     <div
@@ -42,7 +68,7 @@ export default function Index() {
             <div className="mt-16"> {/* Margin from top */}
               <h1 className="text-5xl font-bold mb-4">Tenzin Topjor</h1>
               <p className="mb-2">Your Title</p>
-              <p className="mb-4">Your Location</p>
+              <p className="mb-4">the active section is {activeSection}</p>
               <p className="mb-2">Email: your.email@example.com</p>
               <p className="mb-4">Phone: (123) 456-7890</p>
               <div className="text-gray-300 font-thin text-sm">
@@ -53,18 +79,10 @@ export default function Index() {
             </div>
 
            {/* Catalogue */}
-
-            <div>
-              <div>
-                <p>About Me</p>
-              </div>
-              <div>
-              <p>Experiences</p>
-
-              </div>
-              <div>
-              <p>Projects</p>
-              </div>
+           <div className="flex flex-row space-x-5 items-start">
+              <button onClick={() => scrollToSection('about')}>About Me</button>
+              <button onClick={() => scrollToSection('experiences')}>Experiences</button>
+              <button onClick={() => scrollToSection('projects')}>Projects</button>
             </div>
 
             <div className="sm:mb-16 mt-8 flex space-x-8 text-xl"> {/* Margin from bottom */}
@@ -79,6 +97,7 @@ export default function Index() {
         {/* Right Column */}
         <div className="sm:overflow-y-auto sm:h-screen text-white col-span-7">
           <div className="sm:w-2/3 w-full p-8 sm:p-0">
+          <section id='about'>
             
             <br></br>
             <br></br>
@@ -98,7 +117,10 @@ export default function Index() {
               </p>
               <br></br>
             </div>
+            </section>
+
             {/* Work Experinces */}
+            <section id="experiences">
             <div className='mb-28'>
             <p className='sm:hidden text-lg my-8'>EXPERIENCE</p>
            <ExperienceList />
@@ -109,7 +131,10 @@ export default function Index() {
               <p>View Full Resume</p>
             </Link>
             </div>
+            </section>
             {/* Projects*/}
+            <section id="projects">
+
             <div className='mb-20'>
             <p className='sm:hidden text-lg'>PROJECTS</p>
             <ProjectList />
@@ -120,6 +145,14 @@ export default function Index() {
               <p>View Full Project Archive</p>
             </Link>
             </div>
+            </section>
+
+            <div className='text-textColor font-thin text-sm leading-6 w-3/4 mb-12'>
+              <p>
+              Loosely designed in Figma and coded in Visual Studio Code by yours truly. Built with Remix and Tailwind CSS, deployed with Github Pages. All text is set in the Inter typeface.
+                </p>
+            </div>
+
             <br></br>
           </div>
         </div>
