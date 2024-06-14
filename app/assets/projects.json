@@ -1,0 +1,48 @@
+[
+    {
+      "id": 1,
+      "image": "app/assets/project_img.png",
+      "title": "Plumbing Website",
+      "company": "Plumbing Co.",
+      "description": "Developed a responsive and modern website for a plumbing company. The project involved creating an intuitive user interface, integrating online booking, and ensuring SEO optimization.",
+      "technologies": ["HTML", "CSS", "JavaScript", "Bootstrap", "PHP"],
+      "link": "https://example.com/plumbing-website"
+    },
+    {
+      "id": 2,
+      "image": "app/assets/project_img.png",
+      "title": "Full Text Search Engine",
+      "company": "SearchTech",
+      "description": "Implemented a full text search engine that supports fast and efficient search queries across large datasets. The project involved designing the indexing and query processing algorithms.",
+      "technologies": ["Python", "Elasticsearch", "Django", "PostgreSQL"],
+      "link": "https://example.com/full-text-search-engine"
+    },
+    {
+      "id": 3,
+      "image": "app/assets/project_img.png",
+      "title": "OpenPecha Contribution",
+      "company": "OpenPecha",
+      "description": "Contributed to the OpenPecha project by developing tools for the digitization and annotation of classical texts. The project aimed to make historical documents more accessible to researchers.",
+      "technologies": ["Python", "OpenPecha Toolkit", "OCR", "Machine Learning"],
+      "link": "https://example.com/openpecha-contribution"
+    },
+    {
+      "id": 4,
+      "image": "app/assets/project_img.png",
+      "title": "E-commerce Platform",
+      "company": "RetailCo",
+      "description": "Built a scalable e-commerce platform to support various online stores. Implemented features such as shopping carts, payment integration, and product management.",
+      "technologies": ["React", "Node.js", "Express", "MongoDB"],
+      "link": "https://example.com/e-commerce-platform"
+    },
+    {
+      "id": 5,
+      "image": "app/assets/project_img.png",
+      "title": "Portfolio Website",
+      "company": "Personal Project",
+      "description": "Designed and developed a personal portfolio website to showcase my projects and skills. The site is responsive and includes animations and interactive elements.",
+      "technologies": ["HTML", "CSS", "JavaScript", "React"],
+      "link": "https://example.com/portfolio-website"
+    }
+  ]
+  

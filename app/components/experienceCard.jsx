@@ -1,8 +1,8 @@
 import React from 'react';
 
-const TimelineCard = ({ year, title, company, description, technologies }) => {
+const ExperienceCard = ({ year, title, company, description, technologies }) => {
   return (
-    <div className="relative bg-transparent shadow-lg rounded-lg overflow-hidden mx-auto transition duration-300 m-10 flex items-start sm:flex-row flex-col">
+    <div className="relative bg-transparent shadow-lg rounded-lg overflow-hidden mx-auto transition duration-300 m-10 flex items-start sm:flex-row flex-col p-4">
       {/* Left Container - Timeline */}
       <div className="bg-transparent sm:p-4 flex items-start">
         <div>
@@ -11,20 +11,20 @@ const TimelineCard = ({ year, title, company, description, technologies }) => {
       </div>
       
       {/* Right Container - Content */}
-      <div className="relative flex-1 sm:p-4 sm:pl-20">
+      <div className="relative flex-1 sm:pl-8">
         <div className="mb-4">
           {/* Title with hover effect */}
-          <h2 className="text-xl transition-colors duration-300 hover:text-testtextcolor">{title}</h2>
+          <h2 className="text-l sm:text-xl transition-colors duration-300 hover:text-testtextcolor">{title}</h2>
           <p className="text-sm text-gray-300">{company}</p>
         </div>
-        <div className="text-gray-300 font-thin text-sm leading-6">
+        <div className="font-thin text-sm text-textColor leading-6">
           <p>{description}</p>
         </div>
 
         {/* Technologies Used */}
-        <div className="flex items-center mt-4">
+        <div className="flex flex-wrap items-center mt-4">
           {technologies.map((tech, index) => (
-            <div key={index} className="flex items-center bg-testbackground bg-opacity-75 rounded-full px-3 py-1 mr-2 hover:bg-blue-900 hover:bg-opacity-100 transition duration-300">
+            <div key={index} className="flex items-center bg-testbackground bg-opacity-75 rounded-full px-3 py-1 mr-2 mb-2 hover:bg-blue-900 hover:bg-opacity-100 transition duration-300">
               <p className="text-xs text-testtextcolor">{tech}</p>
             </div>
           ))}
@@ -37,4 +37,4 @@ const TimelineCard = ({ year, title, company, description, technologies }) => {
   );
 };
 
-export default TimelineCard;
+export default ExperienceCard;

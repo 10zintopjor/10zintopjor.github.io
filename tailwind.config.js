@@ -3,12 +3,13 @@ export default {
   theme: {
     extend: {
       fontFamily:{
-        "my-font":["Poppins", "sans-serif"]
+        "my-font":["Open Sans", "sans-serif"]
       },
       colors: {
         customBLue:"#0f172a",
         testbackground:"#22536a",
         testtextcolor:"#44a4a7",
+        textColor:"#94A2B9",
       }
     },
   },
