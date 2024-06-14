@@ -12,6 +12,7 @@ export default function Index() {
       setShowMargin(window.scrollY === 0);
     };
 
+    
     const handleMouseMove = (event) => {
       setMousePosition({ x: event.clientX, y: event.clientY });
     };
