@@ -1,7 +1,7 @@
 [
     {
       "id": 1,
-      "image": "/public/project_img.png",
+      "image": "app/assets/project_img.png",
       "title": "Plumbing Website",
       "company": "Plumbing Co.",
       "description": "Developed a responsive and modern website for a plumbing company. The project involved creating an intuitive user interface, integrating online booking, and ensuring SEO optimization.",
@@ -10,7 +10,7 @@
     },
     {
       "id": 2,
-      "image": "/public/project_img.png",
+      "image": "app/assets/project_img.png",
       "title": "Full Text Search Engine",
       "company": "SearchTech",
       "description": "Implemented a full text search engine that supports fast and efficient search queries across large datasets. The project involved designing the indexing and query processing algorithms.",
