@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { FaXTwitter, FaFacebook, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa6";
-
+import TimelineCard from '../components/experienceCard';
+import timelineData from '../assets/timelineData.json'
 
 
 export default function Index() {
@@ -12,7 +13,7 @@ export default function Index() {
       setShowMargin(window.scrollY === 0);
     };
 
-    
+
     const handleMouseMove = (event) => {
       setMousePosition({ x: event.clientX, y: event.clientY });
     };
@@ -45,11 +46,11 @@ export default function Index() {
               <p className="mb-4">Your Location</p>
               <p className="mb-2">Email: your.email@example.com</p>
               <p className="mb-4">Phone: (123) 456-7890</p>
-              <p className="mb-4 text-sm">
-                Brief bio or description about yourself. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed
-                cursus ante dapibus diam.
+              <div className="text-gray-300 font-thin text-sm">
+              <p className="leading-6">
+                I serve as a dedicated full-stack developer, responsible for developing and maintaining scalable web applications.
               </p>
+            </div> 
             </div>
             <div className="sm:mb-16 mt-8 flex space-x-8 text-xl"> {/* Margin from bottom */}
               <FaGithub />
@@ -61,24 +62,42 @@ export default function Index() {
           </div>
         </div>
         {/* Right Column */}
-        <div className={`sm:overflow-y-auto sm:h-screen text-gray-300 w-full`}>
+        <div className={`sm:overflow-y-auto sm:h-screen text-white w-full`}>
           <div className="sm:w-2/3 w-full p-8 sm:p-0">
             <br></br>
             <br></br>
             <br></br>
             <br></br>
-            <div>
+            <div className='font-thin'>
+              
               <p>
               I am a passionate full-stack developer with a strong foundation in both front-end and back-end technologies. My journey into the world of programming began with a curiosity for building digital solutions that make a tangible impact. With extensive experience in languages such as JavaScript, Python, and Java, coupled with frameworks like React, Node.js, and Django, I thrive on creating seamless, intuitive web applications.
               </p><br></br>
 
+              <p >
+              Driven by a relentless pursuit of innovation, I continuously seek to expand my skill set and stay abreast of emerging technologies and industry trends. This commitment enables me to deliver cutting-edge solutions that empower businesses and elevate user experiences. 
+          
+              </p>
+              <br></br>
+
               <p>
-              Driven by a relentless pursuit of innovation, I continuously seek to expand my skill set and stay abreast of emerging technologies and industry trends. This commitment enables me to deliver cutting-edge solutions that empower businesses and elevate user experiences. Whether collaborating with cross-functional teams or independently tackling challenges, I bring a proactive mindset and a passion for problem-solving to every project.
+              Whether collaborating with cross-functional teams or independently tackling challenges, I bring a proactive mindset and a passion for problem-solving to every project.
               </p>
               <br></br>
 
 
             </div>
+            {/* Map through timelineData and render TimelineCard for each entry */}
+        {timelineData.map((entry) => (
+          <TimelineCard
+            key={entry.id}
+            year={entry.year}
+            title={entry.title}
+            company={entry.company}
+            description={entry.description}
+            technologies={entry.technologies} // Ensure technologies are passed
+          />
+        ))}
             <h2 className="text-2xl font-bold mb-4">Education</h2>
             {/* Education Entries */}
             {Array.from({ length: 5 }).map((_, i) => (

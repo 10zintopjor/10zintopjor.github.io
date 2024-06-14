@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "year": "2022-2024",
+    "title": "Backend Developer",
+    "company": "Esukhia",
+    "description": "I serve as a dedicated full-stack developer, responsible for developing and maintaining scalable web applications, implementing innovative features, and ensuring seamless user experiences. With a proactive approach to problem-solving and a commitment to staying updated with industry trends.",
+    "technologies": ["React", "Node.js", "Express", "MongoDB"]
+  },
+  {
+    "id": 2,
+    "year": "2020-2022",
+    "title": "Frontend Developer",
+    "company": "Example Inc.",
+    "description": "As a frontend developer, I focused on crafting responsive user interfaces using modern technologies such as React, HTML, CSS, and JavaScript. I worked closely with designers and backend developers to deliver exceptional user experiences.",
+    "technologies": ["React", "HTML", "CSS", "JavaScript"]
+  },
+  {
+    "id": 3,
+    "year": "2018-2020",
+    "title": "UI/UX Designer",
+    "company": "Design Studio XYZ",
+    "description": "As a UI/UX designer, I created intuitive and visually appealing designs for web and mobile applications. I conducted user research, created wireframes, and collaborated with development teams to ensure designs were implemented seamlessly.",
+    "technologies": ["Figma", "Adobe XD", "Sketch"]
+  }
+]
