@@ -51,6 +51,22 @@ export default function Index() {
               </p>
             </div> 
             </div>
+
+           {/* Catalogue */}
+
+            <div>
+              <div>
+                <p>About Me</p>
+              </div>
+              <div>
+              <p>Experiences</p>
+
+              </div>
+              <div>
+              <p>Projects</p>
+              </div>
+            </div>
+
             <div className="sm:mb-16 mt-8 flex space-x-8 text-xl"> {/* Margin from bottom */}
               <FaGithub />
               <FaLinkedin />
@@ -77,7 +93,6 @@ export default function Index() {
               Driven by a relentless pursuit of innovation, I continuously seek to expand my skill set and stay abreast of emerging technologies and industry trends. This commitment enables me to deliver cutting-edge solutions that empower businesses and elevate user experiences. 
               </p>
               <br></br>
-
               <p>
               Whether collaborating with cross-functional teams or independently tackling challenges, I bring a proactive mindset and a passion for problem-solving to every project.
               </p>
