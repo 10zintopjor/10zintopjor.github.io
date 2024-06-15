@@ -2,7 +2,7 @@ import React from 'react';
 
 const ProjectCard = ({ image, title, company, description, technologies, link }) => {
   return (
-    <div className="relative bg-transparent shadow-lg rounded-lg overflow-hidden mx-auto transition duration-300 m-10 flex flex-col sm:flex-row items-start p-4">
+    <div className="relative bg-transparent shadow-lg rounded-lg overflow-hidden mx-auto transition duration-300 flex flex-col sm:flex-row items-start m-10 py-4 px-2">
       {/* Left Container - Image (on desktop it comes above) */}
       <div className="hidden sm:flex sm:w-1/4 items-center justify-center sm:p-4">
         <img src={image} alt={`${title} image`} className="object-cover rounded-lg w-full h-30 w-auto" />

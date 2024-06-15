@@ -2,7 +2,7 @@ import React from 'react';
 
 const ExperienceCard = ({ year, title, company, description, technologies }) => {
   return (
-    <div className="relative bg-transparent shadow-lg rounded-lg overflow-hidden mx-auto transition duration-300 m-10 flex items-start sm:flex-row flex-col p-4">
+    <div className="relative bg-transparent shadow-lg rounded-lg overflow-hidden mx-auto transition duration-300 m-10 py-4 px-2 flex items-start sm:flex-row flex-col">
       {/* Left Container - Timeline */}
       <div className="bg-transparent sm:p-4 flex items-start">
         <div>

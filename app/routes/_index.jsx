@@ -96,7 +96,7 @@ export default function Index() {
         </div>
         {/* Right Column */}
         <div className="sm:overflow-y-auto sm:h-screen text-white col-span-7">
-          <div className="sm:w-2/3 w-full p-8 sm:p-0">
+          <div className="sm:w-2/3 w-full p-3 sm:p-0">
           <section id='about'>
             
             <br></br>
