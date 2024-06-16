@@ -6,9 +6,9 @@ import { Link } from "@remix-run/react";
 export default function RightContainer({scrollableDivRef,sectionsRef}) {
   return (
     <div ref={scrollableDivRef} className="sm:overflow-y-auto sm:h-screen text-white col-span-7">
-    <div className="sm:w-2/3 w-full p-4 sm:p-0">
+    <div className="sm:w-2/3 w-full px-4 sm:p-0">
       <section id="about" ref={el => sectionsRef.current[0] = el}>
-        <br /><br /><br /><br />
+        <br /><br /><br />
         <p className='sm:hidden text-lg mb-8'>ABOUT</p>
         <div className='text-textColor mb-20'>
           <p>
@@ -27,7 +27,7 @@ export default function RightContainer({scrollableDivRef,sectionsRef}) {
       {/* Work Experiences */}
       <section id="experiences" ref={el => sectionsRef.current[1] = el}>
         <div className='mb-28'>
-          <p className='sm:hidden text-lg my-8'>EXPERIENCE</p>
+          <p className='sm:hidden text-lg my-6'>EXPERIENCE</p>
           <ExperienceList />
           <Link
             to="/resume"

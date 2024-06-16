@@ -20,7 +20,7 @@ export default function LeftContainer({ activeSection, setActiveSection }) {
 
   return (
     <div className="flex sm:justify-end justify-center col-span-5">
-      <div className="flex flex-col justify-between p-8 text-gray-200 sm:w-3/5 w-full">
+      <div className="flex flex-col justify-between p-4 sm:p-0 text-gray-200 sm:w-3/5 w-full">
         <div className="mt-16">
           <h1 className="text-5xl font-bold mb-4">Tenzin Topjor</h1>
           <p className="mb-2">Full Stack Developer</p>
