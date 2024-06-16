@@ -70,6 +70,8 @@ export default function Index() {
             <div className="mt-16">
               <h1 className="text-5xl font-bold mb-4">Tenzin Topjor</h1>
               <p className="mb-2">Full Stack Developer</p>
+              <p className="mb-2">CUrrent Section :{activeSection}</p>
+
               <p className="mb-2">Email: your.email@example.com</p>
               <p className="mb-4">Phone: (123) 456-7890</p>
               <div className="text-gray-300 font-thin text-sm">
