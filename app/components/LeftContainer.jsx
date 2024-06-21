@@ -24,9 +24,8 @@ export default function LeftContainer({ activeSection, setActiveSection }) {
         <div className="mt-16">
           <h1 className="text-5xl font-bold mb-4">Tenzin Topjor</h1>
           <p className="mb-2">Full Stack Developer</p>
-          <p className="mb-2">Current Section: {activeSection}</p>
-          <p className="mb-2">Email: your.email@example.com</p>
-          <p className="mb-4">Phone: (123) 456-7890</p>
+          <p className="mb-2">Email: tenzintopjor27@gmail.com</p>
+          <p className="mb-4">Phone: (+1) 437-662-7338</p>
           <div className="text-gray-300 font-thin text-sm">
             <p className="leading-6">
               I serve as a dedicated full-stack developer, responsible for developing and maintaining scalable web applications.
